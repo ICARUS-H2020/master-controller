@@ -1,0 +1,39 @@
+server:
+  port: 8097
+  compression:
+    enabled: true
+  error:
+    include-message: always
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: "dd/MM/yyyy"
+    time-zone: Europe/Athens
+    serialization:
+      write_dates_as_timestamps: false
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+  output:
+    ansi:
+      enabled: always
+
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+    eu:
+      icarus: debug
+  file:
+    path: ${java.io.tmpdir}
+    name: ${logging.file.path}/mastercontroller.log
+
+icarus:
+  securespace:
+    url: ${ICARUS_SECURE_SPACE_URL}
+
+  eng:
+    url: ${ICARUS_ENG_URL}
+

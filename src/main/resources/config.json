@@ -1,0 +1,8 @@
+{
+  "master_key": "<value>",
+  "token": "Bearer <value>",
+  "worker_key": "Bearer <value>",
+  "secure_space_key": "<value>",
+  "email_username": "mail",
+  "email_password": "<value>"
+}
